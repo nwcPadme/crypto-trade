@@ -1,0 +1,18 @@
+
+        {
+          "name": "Crypto Trade Lite",
+          "short_name": "Crypto Trade",
+          "start_url": "start.html",
+          "display": "standalone",
+          "icons":[{"src": "data/images/header/next_logo.png"}],
+          "prefer_related_applications": true,
+          "related_applications": [
+            {
+              "platform": "play",
+              "id": "com.imabuilder.madgamesmaker.cryptotrade"
+            }
+          ],
+         "background_color": "#ffffff",
+         "theme_color": "#000000"
+        }
+                

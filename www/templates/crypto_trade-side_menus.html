@@ -1,0 +1,43 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-right-top" class="page-title bar-balanced-900">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-help-buoy" id="menu-popover" ng-click="popover.show($event)"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="crypto_trade-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="text-center expanded balanced-900-bg">
+			<img ng-src="{{ appLogo | trustUrl }}" class="avatar motion spin fade" />
+			<div class="menu-bottom"><span ng-bind-html="appName | strHTML"></span><br/></div>
+		</ion-header-bar>
+		<ion-content class="has-expanded-header light-bg balanced-900">
+			<ion-list class="list" >
+				<ion-item ng-hide="hide_menu_why_us"  class="menu-why_us item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="crypto_trade.why_us">
+					<i class="icon ion-person-stalker"></i> {{ "Why Us" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_how_it_works"  class="menu-how_it_works item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="crypto_trade.how_it_works">
+					<i class="icon ion-android-favorite"></i> {{ "How it Works" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_instruments"  class="menu-instruments item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="crypto_trade.instruments">
+					<i class="icon ion-android-favorite"></i> {{ "Instruments" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_faq"  class="menu-faq item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="crypto_trade.faq">
+					<i class="icon ion-help-circled"></i> {{ "FAQ" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_login"  class="menu-login item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="crypto_trade.login">
+					<i class="icon ion-android-chat"></i> {{ "Login" | translate }}
+				</ion-item>
+				<ion-item ng-hide="hide_menu_register"  class="menu-register item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="crypto_trade.register">
+					<i class="icon ion-android-playstore"></i> {{ "Register" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
